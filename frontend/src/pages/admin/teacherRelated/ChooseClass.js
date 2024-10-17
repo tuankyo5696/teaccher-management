@@ -31,7 +31,7 @@ const ChooseClass = ({ situation }) => {
     }
 
     const sclassColumns = [
-        { id: 'name', label: 'Class Name', minWidth: 170 },
+        { id: 'name', label: 'Tên lớp học', minWidth: 170 },
     ]
 
     const sclassRows = sclassesList && sclassesList.length > 0 && sclassesList.map((sclass) => {
@@ -59,15 +59,15 @@ const ChooseClass = ({ situation }) => {
                 :
                 <>
                     {getresponse ?
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginTop: '16px', marginLeft: '8px' }}>
                             <Button variant="contained" onClick={() => navigate("/Admin/addclass")}>
-                                Add Class
+                                Thêm lớp
                             </Button>
                         </Box>
                         :
                         <>
                             <Typography variant="h6" gutterBottom component="div">
-                                Choose a class
+                                Chọn lớp học
                             </Typography>
                             {Array.isArray(sclassesList) && sclassesList.length > 0 &&
                                 <TableTemplate buttonHaver={SclassButtonHaver} columns={sclassColumns} rows={sclassRows} />

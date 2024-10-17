@@ -34,9 +34,9 @@ const ShowTeachers = () => {
         return <div>Loading...</div>;
     } else if (response) {
         return (
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginTop: '16px', marginLeft: '8px' }}>
                 <GreenButton variant="contained" onClick={() => navigate("/Admin/teachers/chooseclass")}>
-                    Add Teacher
+                    Thêm Giáo Viên
                 </GreenButton>
             </Box>
         );
@@ -56,9 +56,9 @@ const ShowTeachers = () => {
     };
 
     const columns = [
-        { id: 'name', label: 'Name', minWidth: 170 },
-        { id: 'teachSubject', label: 'Subject', minWidth: 100 },
-        { id: 'teachSclass', label: 'Class', minWidth: 170 },
+        { id: 'name', label: 'Tên Giáo Viên', minWidth: 170 },
+        { id: 'teachSubject', label: 'Môn học', minWidth: 100 },
+        { id: 'teachSclass', label: 'Lớp', minWidth: 170 },
     ];
 
     const rows = teachersList.map((teacher) => {
@@ -73,7 +73,7 @@ const ShowTeachers = () => {
 
     const actions = [
         {
-            icon: <PersonAddAlt1Icon color="primary" />, name: 'Add New Teacher',
+            icon: <PersonAddAlt1Icon color="primary" />, name: 'Thêm giáo viên mới',
             action: () => navigate("/Admin/teachers/chooseclass")
         },
         {
@@ -120,7 +120,7 @@ const ShowTeachers = () => {
                                                                 onClick={() => {
                                                                     navigate(`/Admin/teachers/choosesubject/${row.teachSclassID}/${row.id}`)
                                                                 }}>
-                                                                Add Subject
+                                                                Thêm môn học
                                                             </Button>
                                                         )}
                                                     </StyledTableCell>
@@ -138,7 +138,7 @@ const ShowTeachers = () => {
                                             </IconButton>
                                             <BlueButton variant="contained"
                                                 onClick={() => navigate("/Admin/teachers/teacher/" + row.id)}>
-                                                View
+                                                Xem
                                             </BlueButton>
                                         </StyledTableCell>
                                     </StyledTableRow>

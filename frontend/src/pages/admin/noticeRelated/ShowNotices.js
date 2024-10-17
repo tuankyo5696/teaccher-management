@@ -63,7 +63,7 @@ const ShowNotices = () => {
 
     const actions = [
         {
-            icon: <NoteAddIcon color="primary" />, name: 'Add New Notice',
+            icon: <NoteAddIcon color="primary" />, name: 'Thêm thông báo mới',
             action: () => navigate("/Admin/addnotice")
         },
         {
@@ -79,10 +79,10 @@ const ShowNotices = () => {
                 :
                 <>
                     {response ?
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginTop: '16px', marginLeft: '8px' }}>
                             <GreenButton variant="contained"
                                 onClick={() => navigate("/Admin/addnotice")}>
-                                Add Notice
+                                Thêm thông báo
                             </GreenButton>
                         </Box>
                         :

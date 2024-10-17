@@ -52,7 +52,7 @@ const TeacherDetails = () => {
                         </>
                     ) : (
                         <Button variant="contained" onClick={handleAddSubject}>
-                            Add Subject
+                            Thêm môn học
                         </Button>
                     )}
                 </Container>

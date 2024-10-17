@@ -36,11 +36,11 @@ const ChooseSubject = ({ situation }) => {
         return <div>Loading...</div>;
     } else if (response) {
         return <div>
-            <h1>Sorry all subjects have teachers assigned already</h1>
-            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
-                <PurpleButton variant="contained"
+            <h1 style={{ marginLeft: '8px'}}>Xin lỗi vì các môn học đã có đủ giáo viên</h1>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginTop: '16px', marginLeft: '8px' }}>
+                <PurpleButton variant="contained" 
                     onClick={() => navigate("/Admin/addsubject/" + classID)}>
-                    Add Subjects
+                   Thêm môn học
                 </PurpleButton>
             </Box>
         </div>;

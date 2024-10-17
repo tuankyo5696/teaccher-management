@@ -51,7 +51,7 @@ const AccountMenu = () => {
                 <MenuItem>
                     <Avatar />
                     <Link to={`/${currentRole}/profile`}>
-                        Profile
+                        Hồ sơ
                     </Link>
                 </MenuItem>
                 <Divider />

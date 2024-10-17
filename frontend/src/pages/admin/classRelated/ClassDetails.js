@@ -84,7 +84,7 @@ const ClassDetails = () => {
                         navigate(`/Admin/class/subject/${classID}/${row.id}`)
                     }}
                 >
-                    View
+                   Xem
                 </BlueButton >
             </>
         );
@@ -92,7 +92,7 @@ const ClassDetails = () => {
 
     const subjectActions = [
         {
-            icon: <PostAddIcon color="primary" />, name: 'Add New Subject',
+            icon: <PostAddIcon color="primary" />, name: 'Thêm môn học',
             action: () => navigate("/Admin/addsubject/" + classID)
         },
         {
@@ -105,18 +105,18 @@ const ClassDetails = () => {
         return (
             <>
                 {response ?
-                    <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginTop: '16px', marginLeft: '8px' }}>
                         <GreenButton
                             variant="contained"
                             onClick={() => navigate("/Admin/addsubject/" + classID)}
                         >
-                            Add Subjects
+                            Thêm môn học
                         </GreenButton>
                     </Box>
                     :
                     <>
                         <Typography variant="h5" gutterBottom>
-                            Subjects List:
+                            Danh sách môn học:
                         </Typography>
 
                         <TableTemplate buttonHaver={SubjectsButtonHaver} columns={subjectColumns} rows={subjectRows} />
@@ -150,7 +150,7 @@ const ClassDetails = () => {
                     variant="contained"
                     onClick={() => navigate("/Admin/students/student/" + row.id)}
                 >
-                    View
+                    Xem
                 </BlueButton>
                 <PurpleButton
                     variant="contained"
@@ -166,7 +166,7 @@ const ClassDetails = () => {
 
     const studentActions = [
         {
-            icon: <PersonAddAlt1Icon color="primary" />, name: 'Add New Student',
+            icon: <PersonAddAlt1Icon color="primary" />, name: 'Thêm học sinh',
             action: () => navigate("/Admin/class/addstudents/" + classID)
         },
         {
@@ -185,7 +185,7 @@ const ClassDetails = () => {
                                 variant="contained"
                                 onClick={() => navigate("/Admin/class/addstudents/" + classID)}
                             >
-                                Add Students
+                                Thêm học sinh
                             </GreenButton>
                         </Box>
                     </>
@@ -234,15 +234,16 @@ const ClassDetails = () => {
                         variant="contained"
                         onClick={() => navigate("/Admin/class/addstudents/" + classID)}
                     >
-                        Add Students
+                        Thêm học sinh
                     </GreenButton>
                 }
+                <Box margin='8px' />
                 {response &&
                     <GreenButton
                         variant="contained"
                         onClick={() => navigate("/Admin/addsubject/" + classID)}
                     >
-                        Add Subjects
+                        Thêm môn học
                     </GreenButton>
                 }
             </>

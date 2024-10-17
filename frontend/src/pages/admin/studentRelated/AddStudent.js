@@ -88,8 +88,8 @@ const AddStudent = ({ situation }) => {
         <>
             <div className="register">
                 <form className="registerForm" onSubmit={submitHandler}>
-                    <span className="registerTitle">Add Student</span>
-                    <label>Name</label>
+                    <span className="registerTitle">Thêm học sinh</span>
+                    <label>Tên</label>
                     <input className="registerInput" type="text" placeholder="Enter student's name..."
                         value={name}
                         onChange={(event) => setName(event.target.value)}
@@ -113,13 +113,13 @@ const AddStudent = ({ situation }) => {
                         </>
                     }
 
-                    <label>Roll Number</label>
+                    <label>Mã định danh</label>
                     <input className="registerInput" type="number" placeholder="Enter student's Roll Number..."
                         value={rollNum}
                         onChange={(event) => setRollNum(event.target.value)}
                         required />
 
-                    <label>Password</label>
+                    <label>Mật khẩu</label>
                     <input className="registerInput" type="password" placeholder="Enter student's password..."
                         value={password}
                         onChange={(event) => setPassword(event.target.value)}
@@ -129,7 +129,7 @@ const AddStudent = ({ situation }) => {
                         {loader ? (
                             <CircularProgress size={24} color="inherit" />
                         ) : (
-                            'Add'
+                            'Thêm'
                         )}
                     </button>
                 </form>

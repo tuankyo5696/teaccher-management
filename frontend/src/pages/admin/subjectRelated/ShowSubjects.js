@@ -43,9 +43,9 @@ const ShowSubjects = () => {
     }
 
     const subjectColumns = [
-        { id: 'subName', label: 'Sub Name', minWidth: 170 },
-        { id: 'sessions', label: 'Sessions', minWidth: 170 },
-        { id: 'sclassName', label: 'Class', minWidth: 170 },
+        { id: 'subName', label: 'Tên môn học', minWidth: 170 },
+        { id: 'sessions', label: 'Số Buổi', minWidth: 170 },
+        { id: 'sclassName', label: 'Lớp', minWidth: 170 },
     ]
 
     const subjectRows = subjectsList.map((subject) => {
@@ -66,7 +66,7 @@ const ShowSubjects = () => {
                 </IconButton>
                 <BlueButton variant="contained"
                     onClick={() => navigate(`/Admin/subjects/subject/${row.sclassID}/${row.id}`)}>
-                    View
+                    Xem
                 </BlueButton>
             </>
         );
@@ -74,7 +74,7 @@ const ShowSubjects = () => {
 
     const actions = [
         {
-            icon: <PostAddIcon color="primary" />, name: 'Add New Subject',
+            icon: <PostAddIcon color="primary" />, name: 'Thêm môn học mới',
             action: () => navigate("/Admin/subjects/chooseclass")
         },
         {
@@ -90,10 +90,10 @@ const ShowSubjects = () => {
                 :
                 <>
                     {response ?
-                        <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '16px' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-start', marginTop: '16px', marginLeft: '8px' }}>
                             <GreenButton variant="contained"
                                 onClick={() => navigate("/Admin/subjects/chooseclass")}>
-                                Add Subjects
+                               Thêm môn học
                             </GreenButton>
                         </Box>
                         :

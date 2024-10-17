@@ -70,7 +70,7 @@ const AddClass = () => {
                     <form onSubmit={submitHandler}>
                         <Stack spacing={3}>
                             <TextField
-                                label="Create a class"
+                                label="Tạo lớp học"
                                 variant="outlined"
                                 value={sclassName}
                                 onChange={(event) => {
@@ -86,10 +86,10 @@ const AddClass = () => {
                                 type="submit"
                                 disabled={loader}
                             >
-                                {loader ? <CircularProgress size={24} color="inherit" /> : "Create"}
+                                {loader ? <CircularProgress size={24} color="inherit" /> : "Tạo"}
                             </BlueButton>
                             <Button variant="outlined" onClick={() => navigate(-1)}>
-                                Go Back
+                               Quay lại
                             </Button>
                         </Stack>
                     </form>
